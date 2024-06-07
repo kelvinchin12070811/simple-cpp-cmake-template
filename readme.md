@@ -10,8 +10,10 @@ example:
 git clone --depth 1 https://github.com/kelvinchin12070811/simple-cpp-cmake-template.git <project_name>
 ```
 
-or with ssh
+or with ssh:
 
 ```bash
 git clone --depth 1 git@github.com:kelvinchin12070811/simple-cpp-cmake-template.git <project_name>
 ```
+
+Then delete the .git folder inside and start with your own via `git init`, optional to remove this readme too.
