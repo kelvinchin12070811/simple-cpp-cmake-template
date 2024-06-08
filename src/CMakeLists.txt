@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10.0)
+cmake_minimum_required(VERSION 3.14.0)
 project("app")
 set(CMAKE_INCLUDE_CURRENT_DIR on)
 set(CMAKE_CXX_STANDARD 20)
