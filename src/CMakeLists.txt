@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14.0)
+cmake_minimum_required(VERSION 3.28.0)
 project("app")
 set(CMAKE_INCLUDE_CURRENT_DIR on)
 set(CMAKE_CXX_STANDARD 20)
@@ -20,7 +20,12 @@ set(CMAKE_CXX_STANDARD 20)
 # FetchContent_MakeAvailable(raylib)
 
 message(STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
-file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/*.hpp")
+file(GLOB_RECURSE SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.ixx"
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.cppm"
+)
 add_executable(${PROJECT_NAME} ${SOURCES})
 # target_link_libraries(${PROJECT_NAME} PRIVATE
 # raylib
