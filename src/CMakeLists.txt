@@ -19,16 +19,9 @@ set(CMAKE_CXX_STANDARD 20)
 
 # FetchContent_MakeAvailable(raylib)
 
-# Source files (.cpp files) here
-set(SOURCE_FILES
-    "Main.cpp"
-)
-
-# Header files here
-set(HEADER_FILES
-)
-
-add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
+message(STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
+file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/*.hpp")
+add_executable(${PROJECT_NAME} ${SOURCES})
 # target_link_libraries(${PROJECT_NAME} PRIVATE
 # raylib
 # )
