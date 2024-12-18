@@ -30,3 +30,8 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # target_link_libraries(${PROJECT_NAME} PRIVATE
 # raylib
 # )
+
+if(MSVC)
+   target_compile_options(<target> PUBLIC "/ZI")
+   target_link_options(<target> PUBLIC "/INCREMENTAL")
+endif()
