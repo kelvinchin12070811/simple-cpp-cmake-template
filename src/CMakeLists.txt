@@ -32,6 +32,6 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # )
 
 if(MSVC)
-   target_compile_options(<target> PUBLIC "/ZI")
-   target_link_options(<target> PUBLIC "/INCREMENTAL")
+   target_compile_options(${PROJECT_NAME} PUBLIC "/ZI")
+   target_link_options(${PROJECT_NAME} PUBLIC "/INCREMENTAL")
 endif()
