@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 20)
 # set(FETCHCONTENT_QUIET FALSE)
 # set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
 # set(BUILD_GAMES    OFF CACHE BOOL "" FORCE) # don't build the supplied example games
+# set(BUILD_SHARED_LIBS ON)
 
 # FetchContent_Declare(
 #     raylib
@@ -42,3 +43,9 @@ if(MSVC)
    target_compile_options(${PROJECT_NAME} PUBLIC "/ZI")
    target_link_options(${PROJECT_NAME} PUBLIC "/INCREMENTAL")
 endif()
+
+# if (WIN32)
+#  add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+#    COMMAND ${CMAKE_COMMAND} -E copy "${FETCHCONTENT_BASE_DIR}/raylib-build/raylib/raylib.dll" $<TARGET_FILE_DIR:${PROJECT_NAME}>
+#  )
+# endif()
