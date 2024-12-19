@@ -1,4 +1,4 @@
-import App;
+import app.App;
 
 int main(int argc, char **argv)
 {
