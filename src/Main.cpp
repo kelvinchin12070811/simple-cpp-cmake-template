@@ -1,7 +1,6 @@
-#include <iostream>
+import App;
 
 int main(int argc, char **argv)
 {
-    std::cout << "Hello From C++" << std::endl;
-    return 0;
+    return app::main(argc, argv);
 }
